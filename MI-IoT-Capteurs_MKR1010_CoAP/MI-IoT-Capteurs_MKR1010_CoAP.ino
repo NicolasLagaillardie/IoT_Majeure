@@ -1,19 +1,19 @@
 /** Sensing
- *  Xavier Serpaggi <serpaggi@emse.fr>
- *  Maxime Lefrançois <maxime.lefrancois@emse.fr>
- *
- *  Two sensors plugged to an Arduino MKR 1010
- *  - Light : TEMT6000 on Analog pin A0
- *  - Temperature/Humidity : DHT22 or DS1820, data pin on GPIO pin #4
- *  Values are sent via Serial communication.
- *  
- * Required libraries:
- *  - DallasTemperature
- *  - OneWire (Included in the latest versions of DallasTemperature)
- *  - Adafruit Unified Sensor
- *  - DHT Sensor Library (by Adafruit)
- *  - Coap Simple library
- */
+    Xavier Serpaggi <serpaggi@emse.fr>
+    Maxime Lefrançois <maxime.lefrancois@emse.fr>
+
+    Two sensors plugged to an Arduino MKR 1010
+    - Light : TEMT6000 on Analog pin A0
+    - Temperature/Humidity : DHT22 or DS1820, data pin on GPIO pin #4
+    Values are sent via Serial communication.
+
+   Required libraries:
+    - DallasTemperature
+    - OneWire (Included in the latest versions of DallasTemperature)
+    - Adafruit Unified Sensor
+    - DHT Sensor Library (by Adafruit)
+    - Coap Simple library
+*/
 
 #include <string.h>
 #include <stdio.h>
@@ -38,17 +38,17 @@
 DHT dht(TMP, DHT22) ; // pin: TMP, model: DHT22
 
 /* We need objects to handle:
- *  1. WiFi connectivity
- *  2. MQTT messages
- */
+    1. WiFi connectivity
+    2. MQTT messages
+*/
 WiFiClient wifi_client ;
 WiFiUDP udp;
 Coap coap(udp);
 
 /* And associated variables to tell:
- *  1. which WiFi network to connect to
- *  2. what are the MQTT broket IP address and TCP port
- */
+    1. which WiFi network to connect to
+    2. what are the MQTT broket IP address and TCP port
+*/
 const char* wifi_ssid     = "lab-iot-1";
 const char* wifi_password = "lab-iot-1";
 int status = WL_IDLE_STATUS; // the Wifi radio's status
@@ -75,7 +75,7 @@ bool LEDSTATE;
 void callback_core(CoapPacket &packet, IPAddress ip, int port) {
   Serial.println("Core");
 
-  char* message = "</light>,</sensor/lum>,</sensor/tmp>"; // AUGMENT HERE, CONSULT RFC 6690
+  char* message = "</light>,</sensor/lum>,</sensor/tmp>,</sensor/hmdt>"; // AUGMENT HERE, CONSULT RFC 6690
   int payloadlen = sizeof(message);
   // send response
   coap.sendResponse(ip, port, packet.messageid, message, strlen(message), COAP_CONTENT, COAP_APPLICATION_LINK_FORMAT, NULL, 0);
@@ -88,7 +88,7 @@ void callback_lum(CoapPacket &packet, IPAddress ip, int port) {
   Serial.println( String(getLum()).c_str());
 
   String message =  "{ 'thevalueis': " + String(getLum()) + "}";
-  char msg[message.length()+1];
+  char msg[message.length() + 1];
   strcpy(msg, message.c_str());
 
   int payloadlen = sizeof(message);
@@ -97,24 +97,24 @@ void callback_lum(CoapPacket &packet, IPAddress ip, int port) {
 }
 
 void callback_light(CoapPacket &packet, IPAddress ip, int port) {
-  
+
   // send response
   char p[packet.payloadlen + 1];
   memcpy(p, packet.payload, packet.payloadlen);
   p[packet.payloadlen] = NULL;
-  
+
   String message(p);
 
-  switch(packet.code) {
+  switch (packet.code) {
     case COAP_GET:
       Serial.println("Received GET at </light> with message: " + message);
       break;
     case COAP_POST:
       Serial.println("Received POST at </light> with message: " + message);
       if (message.equals("0")) {
-          Serial.println("turn off LED");
-      } else if(message.equals("1")) {
-          Serial.println("turn on LED");
+        Serial.println("turn off LED");
+      } else if (message.equals("1")) {
+        Serial.println("turn on LED");
       }
       break;
     case COAP_PUT:
@@ -147,7 +147,7 @@ void callback_tmp(CoapPacket &packet, IPAddress ip, int port) {
   Serial.println( String(getTmp()).c_str());
 
   String message =  "{ 'thevalueis': " + String(getTmp()) + "}";
-  char msg[message.length()+1];
+  char msg[message.length() + 1];
   strcpy(msg, message.c_str());
 
   int payloadlen = sizeof(message);
@@ -162,7 +162,7 @@ void callback_hmdt(CoapPacket &packet, IPAddress ip, int port) {
   Serial.println( String(getHmdt()).c_str());
 
   String message =  "{ 'thevalueis': " + String(getHmdt()) + "}";
-  char msg[message.length()+1];
+  char msg[message.length() + 1];
   strcpy(msg, message.c_str());
 
   int payloadlen = sizeof(message);
@@ -185,7 +185,7 @@ void setup() {
   digitalWrite(LED_BUILTIN, LOW) ;  // switch LED off
 
   dht.begin() ;
- 
+
   while (status != WL_CONNECTED) {
     Serial.print("Connecting to ");
     Serial.print(wifi_ssid);
@@ -211,7 +211,7 @@ void setup() {
   pinMode(9, OUTPUT);
   digitalWrite(9, HIGH);
   LEDSTATE = true;
-  
+
   // add server url endpoints.
   // can add multiple endpoint urls.
   // exp) coap.server(callback_switch, "switch");
@@ -226,7 +226,7 @@ void setup() {
 
   // start coap server/client
   coap.start();
-  
+
 }
 
 
@@ -235,10 +235,10 @@ void loop() {
   coap.loop();
 }
 /*
-if you change LED, req/res test with coap-client(libcoap), run following.
-coap-client -m get coap://(arduino ip addr)/light
-coap-client -e "1" -m put coap://(arduino ip addr)/light
-coap-client -e "0" -m put coap://(arduino ip addr)/light
+  if you change LED, req/res test with coap-client(libcoap), run following.
+  coap-client -m get coap://(arduino ip addr)/light
+  coap-client -e "1" -m put coap://(arduino ip addr)/light
+  coap-client -e "0" -m put coap://(arduino ip addr)/light
 */
 
 /* ------------------------------------------------------------------- */
