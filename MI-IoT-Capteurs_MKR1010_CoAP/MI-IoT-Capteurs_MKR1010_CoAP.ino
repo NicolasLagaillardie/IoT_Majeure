@@ -75,11 +75,45 @@ bool LEDSTATE;
 void callback_core(CoapPacket &packet, IPAddress ip, int port) {
   Serial.println("Core");
 
-  char* message = "</light>,</sensor/lum>,</sensor/tmp>,</sensor/hmdt>"; // AUGMENT HERE, CONSULT RFC 6690
+  char* message = "</light>"; // AUGMENT HERE, CONSULT RFC 6690
+  int payloadlen = sizeof(message);
+  // send response
+  coap.sendResponse(ip, port, packet.messageid, message , strlen(message), COAP_CONTENT, COAP_APPLICATION_LINK_FORMAT, NULL, 0);
+  coap.server(callback_sensor_lum, ".well-known/core");
+}
+
+void callback_sensor_lum(CoapPacket &packet, IPAddress ip, int port) {
+  Serial.println("Core lum");
+
+  char* message = "</sensor/lum>"; // AUGMENT HERE, CONSULT RFC 6690
+  int payloadlen = sizeof(message);
+  // send response
+  coap.sendResponse(ip, port, packet.messageid, message, strlen(message), COAP_CONTENT, COAP_APPLICATION_LINK_FORMAT, NULL, 0);
+  coap.server(callback_sensor_tmp, ".well-known/core");
+}
+
+void callback_sensor_tmp(CoapPacket &packet, IPAddress ip, int port) {
+  Serial.println("Core tmp");
+
+  char* message = "</sensor/tmp>"; // AUGMENT HERE, CONSULT RFC 6690
+  int payloadlen = sizeof(message);
+  // send response
+  coap.sendResponse(ip, port, packet.messageid, message, strlen(message), COAP_CONTENT, COAP_APPLICATION_LINK_FORMAT, NULL, 0);
+  coap.server(callback_sensor_hmdt, ".well-known/core");
+}
+
+void callback_sensor_hmdt(CoapPacket &packet, IPAddress ip, int port) {
+  Serial.println("Core hmdt");
+
+  char* message = "</sensor/hmdt>"; // AUGMENT HERE, CONSULT RFC 6690
   int payloadlen = sizeof(message);
   // send response
   coap.sendResponse(ip, port, packet.messageid, message, strlen(message), COAP_CONTENT, COAP_APPLICATION_LINK_FORMAT, NULL, 0);
 }
+
+
+
+
 
 void callback_lum(CoapPacket &packet, IPAddress ip, int port) {
   double t = getLum();
