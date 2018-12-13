@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>Project PixLED</title>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <!-- https://github.com/mqttjs/MQTT.js/ -->
+    <script>
+        // '$' is a the JQuery object. It has a lot of function to do Document Object Model (DOM) manipulation, event handling, animation, Ajax and a lot more.
+
+        // create a client that will publish and subscribe to topics
+        var client = mqtt.connect("wss://ddrcrasn:e7czA49tmqUA@m21.cloudmqtt.com:39316");
+
+        // the function passed as parameter will be called when the DOM is ready
+
+        // subscribe to some topic
+        client.on("connect", function() {
+            client.subscribe("sensor/temp/1", function(err) {
+                if (err) {
+                    console.log(err);
+                }
+            });
+            client.subscribe("sensor/temp/2", function(err) {
+                if (err) {
+                    console.log(err);
+                }
+            });
+        });
+
+        // this will be called when a message is received
+        client.on("message", function(topic, payload) {
+            const message = new TextDecoder("utf-8").decode(payload);
+            if (message) {
+                const sensorNumber = topic.split('/')[2];
+                $('#TEMP' + sensorNumber).text(message);
+            }
+        });
+    </script>
+
+    <center>
+
+        <h1>Project PixLED</h1>
+
+        <div>
+            <p>TEMP 1: <span id="TEMP1"></span></p>
+            <p>TEMP 2: <span id="TEMP2"></span></p>
+        </div>
+
+    </center>
+
+
+</body>
+
+</html>
