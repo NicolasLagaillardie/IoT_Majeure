@@ -2,6 +2,8 @@
     <div>
         <div class="container-fluid">
             <div class="row text-center">
+                 
+                 <!-- Panel div start -->
                 <div class="col-xs-12 col-lg-4 col-lg-offset-4">
                     <img src="../assets/logo.png" width="100" height="100">
                 </div>
@@ -42,11 +44,6 @@
                     <!-- End of range slider -->
                 </div>
             </div>
-            <!-- Footer -->
-            <div class="footy text-center">
-                <p>Created with <span class="glyphicon glyphicon-heart-empty"></span> by Nick Jokic.</p>
-            </div>
-            <!-- End of footer -->
         </div>
     </div>
 </template>
@@ -95,8 +92,8 @@
                     width: "500",
                     height: "180",
                     renderer: "line",
-                    min: 228,
-                    max: 248,
+                    min: 220,
+                    max: 260,
                     series: new Rickshaw.Series.FixedDuration([{
                         name: 'v1',
                         color: '#EC644B'

@@ -11,7 +11,7 @@ const express = require('express'),
     io = require('socket.io').listen(server);
 
 var streamInterval;
-var msFrequency = 20;
+var msFrequency = 500;
 
 /* 
 Subscribe (listen) to MQTT topic and start publishing
@@ -51,9 +51,9 @@ function startStreamSimulation() {
     streamInterval = setInterval(function () {
 
         /* Prepare random data */
-        v1 = returnRandomFloat(231, 231.1);
-        v2 = returnRandomFloat(235, 235.3);
-        v3 = returnRandomFloat(238.7, 239.3);
+        v1 = returnRandomFloat(230, 233);
+        v2 = returnRandomFloat(235, 236);
+        v3 = returnRandomFloat(240, 250);
 
         /* Publish random data to the corresponding MQTT topic as a JSON string  */
         mqttClient.publish(mqttTopic, JSON.stringify({

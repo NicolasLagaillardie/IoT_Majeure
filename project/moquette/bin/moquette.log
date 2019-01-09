@@ -1584,3 +1584,299 @@ java.nio.channels.ClosedChannelException
 13/12/2018 11:52:04,048 [Thread-1] INFO  NewNettyAcceptor close 342  - Waiting for worker and boss event loop groups to terminate...
 13/12/2018 11:52:06,250 [Thread-1] INFO  NewNettyAcceptor close 362  - Metrics messages[read=307036, write=307020] bytes[read=16580103, write=0]
 13/12/2018 11:52:06,251 [Thread-1] INFO  Server stopServer 340  - Moquette integration has been stopped.
+09/01/2019 15:50:55,356 [main] INFO  Server startServer 72  - Starting Moquette integration. Configuration file path=/home/lag/Git/All/IoT_Majeure/project/moquette/config/moquette.conf
+09/01/2019 15:50:55,359 [main] INFO  ResourceLoaderConfig <init> 40  - Loading configuration. ResourceLoader = file, configName = null.
+09/01/2019 15:50:55,360 [main] INFO  FileResourceLoader loadResource 68  - Loading file. Path = /home/lag/Git/All/IoT_Majeure/project/moquette/config/moquette.conf.
+09/01/2019 15:50:55,381 [main] INFO  ResourceLoaderConfig <init> 63  - Parsing configuration properties. ResourceLoader = file, configName = null.
+09/01/2019 15:50:55,410 [main] INFO  Server initInterceptors 255  - Configuring message interceptors...
+09/01/2019 15:50:55,413 [main] INFO  BrokerInterceptor <init> 47  - Initializing broker interceptor. InterceptorIds=[]
+09/01/2019 15:50:55,418 [main] INFO  Server startServer 157  - Using default SSL context creator
+09/01/2019 15:50:55,443 [main] INFO  ResourceAuthenticator <init> 59  - Loading password file config/password_file.conf
+09/01/2019 15:50:55,443 [main] INFO  FileResourceLoader loadResource 68  - Loading file. Path = /home/lag/Git/All/IoT_Majeure/project/moquette/config/password_file.conf.
+09/01/2019 15:50:55,444 [main] INFO  Server initializeAuthenticator 249  - An io.moquette.broker.security.ResourceAuthenticator authenticator instance will be used
+09/01/2019 15:50:55,445 [main] INFO  Server initializeAuthorizatorPolicy 223  - Authorizator policy io.moquette.broker.security.PermitAllAuthorizatorPolicy instance will be used
+09/01/2019 15:50:55,446 [main] INFO  CTrieSubscriptionDirectory init 33  - Initializing CTrie
+09/01/2019 15:50:55,448 [main] INFO  CTrieSubscriptionDirectory init 36  - Initializing subscriptions store...
+09/01/2019 15:50:55,481 [main] INFO  NewNettyAcceptor initialize 128  - Netty is using NIO
+09/01/2019 15:50:55,694 [main] INFO  NewNettyAcceptor initFactory 189  - Server bound to host=0.0.0.0, port=1883, protocol=TCP MQTT
+09/01/2019 15:50:55,697 [main] INFO  NewNettyAcceptor initFactory 189  - Server bound to host=0.0.0.0, port=8080, protocol=Websocket MQTT
+09/01/2019 15:50:55,699 [main] INFO  Server startServer 193  - Moquette integration has been started successfully in 297 ms
+09/01/2019 18:16:37,785 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,788 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,789 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,789 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,789 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,790 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,790 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,791 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,792 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,792 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,793 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,793 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,793 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,794 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,794 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,795 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,795 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,795 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,796 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,796 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,797 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,797 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,798 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,798 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,798 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,799 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,799 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,800 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,800 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,801 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,801 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,802 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,802 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,803 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,804 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,804 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,805 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,805 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,806 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,806 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,807 [nioEventLoopGroup-3-1] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_9cd6ae6a
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:37,817 [nioEventLoopGroup-3-1] INFO  MQTTConnection handleConnectionLost 249  - Notifying connection lost event. CId: mqttjs_9cd6ae6a, channel: [id: 0x11c8ab0c, L:0.0.0.0/0.0.0.0:1883 ! R:/127.0.0.1:56986]
+09/01/2019 18:16:48,889 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,890 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,891 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,891 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,892 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,893 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,893 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,894 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,894 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,894 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,895 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,895 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,896 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,896 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,897 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,897 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,897 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,898 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,898 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,899 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,899 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,900 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,900 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,901 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,901 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,902 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,902 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,902 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,910 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,910 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,911 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,911 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,912 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,912 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,913 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,913 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,914 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,914 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,915 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,915 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,915 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,916 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,916 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,916 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,917 [nioEventLoopGroup-3-2] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_cd6acd3f
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:16:48,917 [nioEventLoopGroup-3-2] INFO  MQTTConnection handleConnectionLost 249  - Notifying connection lost event. CId: mqttjs_cd6acd3f, channel: [id: 0x5a2d03b5, L:0.0.0.0/0.0.0.0:1883 ! R:/127.0.0.1:42116]
+09/01/2019 18:17:23,325 [nioEventLoopGroup-3-3] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_4b4e26a6
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:17:23,326 [nioEventLoopGroup-3-3] INFO  MQTTConnection handleConnectionLost 249  - Notifying connection lost event. CId: mqttjs_4b4e26a6, channel: [id: 0x88f5652a, L:0.0.0.0/0.0.0.0:1883 ! R:/127.0.0.1:42214]
+09/01/2019 18:31:24,796 [nioEventLoopGroup-3-4] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_c70177e1
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:31:24,798 [nioEventLoopGroup-3-4] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_c70177e1
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:31:24,799 [nioEventLoopGroup-3-4] INFO  MQTTConnection handleConnectionLost 249  - Notifying connection lost event. CId: mqttjs_c70177e1, channel: [id: 0x3c4ccd59, L:0.0.0.0/0.0.0.0:1883 ! R:/127.0.0.1:42494]
+09/01/2019 18:46:12,261 [nioEventLoopGroup-3-5] ERROR NewNettyMQTTHandler exceptionCaught 90  - Unexpected exception while processing MQTT message. Closing Netty channel. CId=mqttjs_0e157f0d
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+09/01/2019 18:46:12,262 [nioEventLoopGroup-3-5] INFO  MQTTConnection handleConnectionLost 249  - Notifying connection lost event. CId: mqttjs_0e157f0d, channel: [id: 0xa9a3e809, L:0.0.0.0/0.0.0.0:1883 ! R:/127.0.0.1:49326]
+09/01/2019 18:46:20,408 [Thread-1] INFO  Server stopServer 326  - Unbinding integration from the configured ports
+09/01/2019 18:46:20,424 [Thread-1] INFO  NewNettyAcceptor close 342  - Waiting for worker and boss event loop groups to terminate...
+09/01/2019 18:46:22,627 [Thread-1] INFO  NewNettyAcceptor close 362  - Metrics messages[read=69721140, write=69721140] bytes[read=3764918160, write=0]
+09/01/2019 18:46:22,628 [Thread-1] INFO  Server stopServer 340  - Moquette integration has been stopped.

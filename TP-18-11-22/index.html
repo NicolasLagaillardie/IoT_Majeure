@@ -18,54 +18,55 @@
 
         // the function passed as parameter will be called when the DOM is ready
 
-            function subscribe(mainTopic) {
-                // subscribe to some topic
-                client.on("connect", function() {
-                    client.subscribe("sensor/2" , function(err) {
-                        if (err) {
-                            console.log(err);
-                        }
-                    });
-                });
-
-                // this will be called when a message is received
-                client.on("message", function(topic, payload) {
-                    const message = new TextDecoder("utf-8").decode(payload);
-                    //console.log(topic + ": " + message);
-                    if (message) {
-                        const subject = message.split(":")[0];
-                        const data = message.split(":")[1];
-                        $('#' + subject).html(data);
-                        $('#reading').html(topic + ": " + message);
+        function subscribe(mainTopic) {
+            // subscribe to some topic
+            client.on("connect", function() {
+                client.subscribe("sensor/2", function(err) {
+                    if (err) {
+                        console.log(err);
                     }
                 });
-                
-                return;
-            };
-
-            
-            setTimeout(subscribe("LUMI"), 200); 
-            setTimeout(subscribe("TEMP"), 200); 
-            setTimeout(subscribe("HMDT"), 200);
-
-            // this will be called when the "LED ON" button is pressed 
-            $('#turn_on').on('click', function() {
-                console.log("hello turn on");
-                var topic = "sensor/2/ACTION";
-                var message = "ON";
-                client.publish(topic, message);
             });
 
-            // this will be called when the "LED OFF" button is pressed 
-            $('#turn_off').on('click', function() {
-                console.log("hello turn off");
-                var topic = "sensor/2/ACTION";
-                var message = "OFF";
-                client.publish(topic, message);
+            // this will be called when a message is received
+            client.on("message", function(topic, payload) {
+                const message = new TextDecoder("utf-8").decode(payload);
+                //console.log(topic + ": " + message);
+                if (message) {
+                    const subject = message.split(":")[0];
+                    const data = message.split(":")[1];
+                    $('#' + subject).html(data);
+                    $('#reading').html(topic + ": " + message);
+                }
             });
+
+            return;
+        };
+
+
+        setTimeout(subscribe("LUMI"), 200);
+        setTimeout(subscribe("TEMP"), 200);
+        setTimeout(subscribe("HMDT"), 200);
+
+        // this will be called when the "LED ON" button is pressed 
+        $('#turn_on').on('click', function() {
+            console.log("hello turn on");
+            var topic = "sensor/2/ACTION";
+            var message = "ON";
+            client.publish(topic, message);
+        });
+
+        // this will be called when the "LED OFF" button is pressed 
+        $('#turn_off').on('click', function() {
+        console.log("hello turn off");
+        var topic = "sensor/2/ACTION";
+        var message = "OFF";
+        client.publish(topic, message);
+        });
 
 
         });
+
     </script>
 
     <h1>Test Ws mqtt.js</h1>
